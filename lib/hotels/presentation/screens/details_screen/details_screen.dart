@@ -21,6 +21,8 @@ import 'package:booking_app/hotels/presentation/components/widgets/my_button_wid
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dart:math' as math;
 
+import '../../components/widgets/static_color_text.dart';
+
 
 class DetailsScreen extends StatefulWidget {
   static const routeName = 'DetailsScreen';

@@ -41,22 +41,14 @@ class BookingScreen extends StatelessWidget {
                   length: 3,
                   child: Scaffold(
                     appBar: AppBar(
-                      // leading: IconButton(
-                      //   onPressed: (){
-                      //     cubit.getAllHotels(1);
-                      //     Navigator.pushReplacementNamed(context, LayoutScreen.routeName);
-                      //   }
-                      //   ,icon: Icon(Icons.arrow_back_ios_rounded),
-                      // ),
-                      // centerTitle: true,
                       elevation: 0,
                       toolbarHeight: 80,
-                      // backgroundColor: AppColors.backGroundColor,
                       title: Column(
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: TabBar(
+
                               onTap: (int index) {
                                 if (index == 0) {
                                   cubit.getUpComingBook("upcomming", 10);
@@ -68,6 +60,8 @@ class BookingScreen extends StatelessWidget {
                                   cubit.getCompletedBook("completed", 10);
                                 }
                               },
+
+
                               unselectedLabelColor: Colors.white70,
                               unselectedLabelStyle: GoogleFonts.kanit(
                                 fontSize: Dimensions.font16,

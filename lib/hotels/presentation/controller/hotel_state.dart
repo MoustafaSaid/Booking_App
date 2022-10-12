@@ -7,6 +7,7 @@ class HotelInitial extends HotelState {}
 class UserRegisterLoadingState extends HotelState {}
 
 class UserRegisterSuccessState extends HotelState {}
+class UserRegisterErrorState extends HotelState {}
 
 
 class LangEnStateSuccess extends HotelState {}
@@ -17,8 +18,10 @@ class SelectFacilityState extends HotelState {}
 
 
 class UserLoginLoadingState extends HotelState {}
-
 class UserLoginSuccessState extends HotelState {}
+class UserLoginErrorState extends HotelState {}
+
+
 class UserLogOutLoadingState extends HotelState {}
 
 class UserLogOutSuccessState extends HotelState {}

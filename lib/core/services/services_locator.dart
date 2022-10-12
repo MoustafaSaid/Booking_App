@@ -25,7 +25,7 @@ class ServiceLocator {
         sl(), sl(), sl(), sl(), sl(), sl(), sl(), sl(), sl(), sl(), sl()));
 
     /// Use Case
-    sl.registerLazySingleton(() => CreateBookingUseCase(sl()));
+    sl.registerLazySingleton(() => CreateBookingUseCase( sl() ));
     sl.registerLazySingleton(() => GetAllHotelsUseCase(sl()));
     sl.registerLazySingleton(() => GetBookingsUseCase(sl()));
     sl.registerLazySingleton(() => GetFacilitiesUseCase(sl()));

@@ -45,8 +45,6 @@ class Status extends Equatable {
 
   const Status({
     required this.type,
-    // required this.ar,
-    // required this.en,
     required this.titleEntity,
   });
 }
@@ -79,8 +77,6 @@ class UserData extends Equatable {
   });
 }
 
-
-
 class UserDataDetails extends Equatable {
   final int? id;
   final String? name;
@@ -104,7 +100,6 @@ class UserDataDetails extends Equatable {
     required this.updatedAt,
   });
 }
-
 
 class LoginRequest extends Equatable {
   final String? email;
@@ -234,6 +229,7 @@ class HotelDetails extends Equatable {
     required this.hotelImages,
   });
 }
+
 class HotelDetailsForBooking extends Equatable {
   final int? id;
   final String? name;
@@ -285,6 +281,7 @@ class HotelDetailsForBooking extends Equatable {
     required this.hotelImages,
   });
 }
+
 class BookingState extends Equatable{
 
   final Status? status;
@@ -298,6 +295,7 @@ class BookingState extends Equatable{
     required this.bookingId,
   });
 }
+
 class Booking extends Equatable {
   final int? bookingId;
   final String? userId;
@@ -346,6 +344,7 @@ class UpdateProfileRequest extends Equatable {
     required this.image,
   });
 }
+
 class AllData extends Equatable {
   final int? currentPage;
   final List<HotelDetails>? hotelData;

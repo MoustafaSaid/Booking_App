@@ -13,8 +13,10 @@ abstract class BaseHotelsRepository{
      RegisterRequestModel registerRequest);
  Future<Either<Failure,UserDataModel>> getUserLogin(
      LoginRequestModel loginRequestModel);
+
  Future<Either<Failure,AllDataModel>> getAllHotelsDetails(
      int pageNumber);
+
  Future<Either<Failure,UserDataModel>> getUpdateUserInfo(
      String name,String email,File image);
  Future<Either<Failure,UserDataDetailsModel>> getInfo(
@@ -23,6 +25,7 @@ abstract class BaseHotelsRepository{
      int userId, int hotelId);
  Future<Either<Failure,StatusModel>> getUpdateBookingStatus(
      int bookingId, String type);
+
  Future<Either<Failure,List<BookingModel>>> getBookings(
      String type, int count);
  Future<Either<Failure,List<HotelFacilityModel>>> getFacilities();
@@ -40,4 +43,3 @@ abstract class BaseHotelsRepository{
      );
 }
 
-//CacheHelper.getData(key: 'token')

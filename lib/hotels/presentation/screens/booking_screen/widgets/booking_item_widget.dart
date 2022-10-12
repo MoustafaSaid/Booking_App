@@ -74,80 +74,78 @@ class BookingItemWidget extends StatelessWidget {
                     ),
                   ),
                   //hotel info
-                  Expanded(
-                    child: Column(
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: Dimensions.height10,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: Dimensions.width20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SmallHeadLineText(
-                                size: Dimensions.font20,
-                                text: hotelName,
-                                maxLines: 1,
-                              ),
-                              SizedBox(
-                                height: Dimensions.height10,
-                              ),
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: Column(
-                                      children: [
-                                        SmallText(
-                                          maxLines: 2,
-                                          text: hotelAddress,
-                                        ),
-                                        SizedBox(
-                                          height: Dimensions.height10 / 2,
-                                        ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            SmallText(
-                                              text: hotelRate,
-                                            ),
-                                            SizedBox(
-                                              width: Dimensions.width10 / 2,
-                                            ),
-                                            Icon(
-                                              Icons.star,
-                                              color: Colors.teal,
-                                              size: Dimensions.iconSize16 * 1.7,
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: Dimensions.width10 / 2,
-                                  ),
-                                  Column(
+                  Column(
+                    // crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: Dimensions.height10,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: Dimensions.width20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SmallHeadLineText(
+                              size: Dimensions.font20,
+                              text: hotelName,
+                              maxLines: 1,
+                            ),
+                            SizedBox(
+                              height: Dimensions.height10,
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
                                     children: [
-                                      SmallHeadLineText(
-                                        size: Dimensions.font20,
-                                        text: hotelPrice,
+                                      SmallText(
+                                        maxLines: 2,
+                                        text: hotelAddress,
                                       ),
-                                      const SmallText(
-                                        text: '/per night',
+                                      SizedBox(
+                                        height: Dimensions.height10 / 2,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          SmallText(
+                                            text: hotelRate,
+                                          ),
+                                          SizedBox(
+                                            width: Dimensions.width10 / 2,
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.teal,
+                                            size: Dimensions.iconSize16 * 1.7,
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                                SizedBox(
+                                  width: Dimensions.width10 / 2,
+                                ),
+                                Column(
+                                  children: [
+                                    SmallHeadLineText(
+                                      size: Dimensions.font20,
+                                      text: hotelPrice,
+                                    ),
+                                    const SmallText(
+                                      text: '/per night',
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

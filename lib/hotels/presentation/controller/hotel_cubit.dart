@@ -60,7 +60,7 @@ class HotelCubit extends Cubit<HotelState> {
   UserDataModel? loginDataModel;
   UserDataModel? updateInfoDataModel;
   UserDataDetails? userInfo;
-  AllDataModel? allHotelsData;
+  AllDataModel?   allHotelsData;
   List<BookingModel> listOfBooking = [];
   BookingStateModel? createBookingResult;
   StatusModel? updateBookingResult;
@@ -159,7 +159,7 @@ class HotelCubit extends Cubit<HotelState> {
     result.fold((l) {
       print(l.message);
       ServerFailure(l.message);
-      emit(HotelErrorState());
+      emit(UserRegisterErrorState());
     }, (r) {
       registerDataModel = r;
       print(r);
@@ -183,10 +183,11 @@ class HotelCubit extends Cubit<HotelState> {
 
     final result = await loginUseCase.call(loginRequestModel);
     result.fold((l) {
-      ServerFailure(l.message);
-      print(l.message);
+      emit(UserLoginErrorState());
 
-      emit(HotelErrorState());
+      //ServerFailure(l.message);
+      //print(l.message);
+
     }, (r) {
       loginDataModel = r;
       userInfo = r.userDataDetails;

@@ -156,6 +156,7 @@ class UserProfileScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               MyButtonWidget(
+                                height: 50,
                                   isPadding: false,
                                   text: 'Logout',
                                   onTap: () {

@@ -21,6 +21,8 @@ import 'package:booking_app/hotels/presentation/components/widgets/my_button_wid
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dart:math' as math;
 
+import '../../components/widgets/static_color_text.dart';
+
 
 class DetailsScreen extends StatefulWidget {
   static const routeName = 'DetailsScreen';
@@ -70,7 +72,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
           return SafeArea(
             child: Scaffold(
                 //backgroundColor: AppColors.backGroundColor,
-                body: CustomScrollView(controller: scrollController, slivers: [
+                body: CustomScrollView(controller: scrollController,
+                    slivers: [
               SliverAppBar(
                 elevation: 0,
                 actionsIconTheme: const IconThemeData(size: 25),

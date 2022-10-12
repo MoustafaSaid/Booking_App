@@ -5,8 +5,8 @@ import 'package:dartz/dartz.dart';
 
 class GetAllHotelsUseCase {
   final BaseHotelsRepository baseHotelsRepository;
-
   GetAllHotelsUseCase(this.baseHotelsRepository);
+
   Future<Either<Failure, AllDataModel>> call(
   int pageNumber
 ) async {
